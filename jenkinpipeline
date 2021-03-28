@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build Code') {
+            steps {
+                echo 'The code will build here '
+                sh'''
+                pwd
+                ls
+                mkdir build code
+                '''
+            }
+        }
